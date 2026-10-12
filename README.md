@@ -1,111 +1,83 @@
-# Data Structure & Graph Performance Analyzer
-**CIT300 Data Structures and Algorithms — Graded Practical Assignment 2**
+# Data Structure and Graph Performance Analyzer
 
-An interactive Java console application integrating core data structures, searching algorithms, graph traversals, and comparative performance analysis.
+CIT300 Data Structures and Algorithms – Graded Practical Assignment 2 (Week 12)
 
----
+## Project Description
 
-## Team Contributions
+- A Java console-based application that demonstrates data structures, searching, graph traversal and performance comparison
+- Includes Array, Stack, Queue, Linked List, Searching, Graph (BFS/DFS) and a performance comparison
+- All modules are integrated into one main menu
 
-### 1. UMAR MOHAMED – Member 1
-**Responsibility: Array Operations & Searching Algorithms**
+## Technologies Used
 
-- **Array Operations (`ArrayOps`)**:
-  - Fixed-capacity integer array implementation.
-  - Insert, insert-at-index, delete (with shifting), search, and display operations.
-  - Array sorting using dual-pivot quicksort.
-  - Capacity and boundary checks (`isEmpty`, `isFull`, `getSize`).
-- **Searching Algorithms (`SearchOps`)**:
-  - Linear Search implementation with step counter and nanosecond timing ($O(n)$).
-  - Binary Search implementation with step counter and nanosecond timing ($O(\log n)$) on sorted data.
-  - Side-by-side search comparison mode.
-- **Console Interface (`ArraySearchMenu`)**:
-  - Interactive submenus for Array and Searching operations.
-  - Robust input validation preventing crashes on non-numeric inputs or empty states.
-- **Git Branch**: `feature/array-search`
+- Java (console application)
+- Git and GitHub (branches, commits, pull requests)
 
----
+## Main Features
 
-### 2. H.F.F HAMNA – 23DA2-0479
-**Responsibility: Stack and Queue Operations**
+- Array: insert, insert at index, delete (with shifting), search, display, sort (dual-pivot quicksort)
+- Searching: linear search and binary search with step counter and nanosecond timing, plus side-by-side comparison
+- Stack: push, pop, peek, display, empty check (handles pop on empty stack)
+- Queue: enqueue, dequeue, peek, display, empty check (handles dequeue on empty queue)
+- Linked List: insert, delete, search, display, size
+- Graph: undirected graph (adjacency list), add vertex, add edge, display, BFS, DFS with step counter
+- Performance comparison: Array vs Linked List for insert, search and delete (steps and time)
+- Input validation and empty-state handling throughout
 
-- **Stack Implementation (`src/stack/MyStack.java`)**:
-  - Push an item onto the stack ($O(1)$).
-  - Pop an item from the stack ($O(1)$) with empty check.
-  - Peek / view top item without removing.
-  - Display stack elements (top to bottom).
-  - Check whether the stack is empty and retrieve size.
-- **Queue Implementation (`src/stack/stackqueue/MyQueue.java`)**:
-  - Enqueue an item into the rear ($O(1)$).
-  - Dequeue an item from the front ($O(1)$) with empty check.
-  - Peek / view the front item.
-  - Display queue elements (front to rear).
-  - Check whether the queue is empty and retrieve size.
-- **Testing**:
-  - Standalone unit test driver in `src/stack/stackqueue/TestStackQueue.java`.
-- **Git Branch**: `hamna-stack-queue`
+## Team Members
 
----
+### 1. M.K. Umar Mohamed (Group Leader)
+- Student ID: 23DA2-0501
+- Assigned Responsibility: Array Operations and Searching Algorithms
+- Individual Contribution:
+  - `ArrayOps`: fixed-capacity array, insert, insert-at-index, delete with shifting, search, display
+  - Dual-pivot quicksort and capacity checks (`isEmpty`, `isFull`, `getSize`)
+  - `SearchOps`: linear search O(n) and binary search O(log n) with step counter and nanosecond timing
+  - Side-by-side search comparison mode
+  - `ArraySearchMenu`: submenus with input validation
+- Git Branch: `feature/array-search`
 
-### 3. MA.AABITH NIHMY – 23DA2-0538
-**Responsibility: Linked List and Performance Analysis**
+### 2. H.F.F. Hamna
+- Student ID: 23DA2-0479
+- Assigned Responsibility: Stack and Queue Operations
+- Individual Contribution:
+  - `src/stack/MyStack.java`: push, pop (empty check), peek, display, isEmpty, size – O(1)
+  - `src/stack/stackqueue/MyQueue.java`: enqueue, dequeue (empty check), peek, display, isEmpty, size – O(1)
+  - `src/stack/stackqueue/TestStackQueue.java`: standalone test driver
+- Git Branch: `hamna-stack-queue`
 
-- **Linked List Implementation (`src/linkedlist/LinkedList.java`)**:
-  - Singly Linked List implementation using custom nodes and pointers.
-  - Insert, delete, search, and display operations.
-  - List size and empty-status checking.
-- **Performance Comparison (`src/linkedlist/PerformanceAnalyzer.java`)**:
-  - Benchmark comparing Array vs. Linked List for Insert, Search, and Delete operations.
-  - Step counter comparison and runtime in nanoseconds.
-  - Formatted results display table.
-- **Testing**:
-  - Standalone test suite in `src/linkedlist/LinkedListTest.java`.
-- **Git Branch**: `feature/linked-list-pr`
+### 3. M.A. Aabith Nihmy
+- Student ID: 23DA2-0538
+- Assigned Responsibility: Linked List and Performance Analysis
+- Individual Contribution:
+  - `src/linkedlist/LinkedList.java`: singly linked list with custom nodes; insert, delete, search, display, size, empty check
+  - `src/linkedlist/PerformanceAnalyzer.java`: Array vs Linked List benchmark for insert, search and delete (steps and ns), formatted results table
+  - `src/linkedlist/LinkedListTest.java`: standalone test suite
+- Git Branch: `feature/linked-list-pr`
 
----
+### 4. S.A.M. Seyed Asliff Ahamed Moulana
+- Student ID: 23DA2-0609
+- Assigned Responsibility: Graph Operations and Integration
+- Individual Contribution:
+  - `src/graph/Graph.java`: undirected graph using `Map<String, List<String>>`
+  - Add vertex and add edge with validation, graph display
+  - BFS (queue) and DFS (stack/recursion) with step counter – O(V + E)
+  - Integrated all modules into the main menu and submenus
+  - Input loop and scanner error handling
+- Git Branch: `feature/graph-integration`
 
-### 4. S.A.M. SEYED ASLIFF AHAMED MOULANA – 23DA2-0609
-**Responsibility: Graph Operations and Integration**
+## How to Run
 
-- **Graph Implementation (`src/graph/Graph.java`)**:
-  - Undirected Graph representation using an adjacency list (`Map<String, List<String>>`).
-  - Add vertex and add edge operations with validation.
-  - Graph structure display.
-  - Breadth-First Search (BFS) traversal using a queue with step counter ($O(V + E)$).
-  - Depth-First Search (DFS) traversal using a stack/recursion with step counter ($O(V + E)$).
-- **Integration**:
-  - Main menu and submenus integration wiring all team members' modules.
-  - Robust user input loop and scanner error handling.
-- **Git Branch**: `feature/graph-integration`
+- Install JDK 8 or later
+- Clone the repository:
+  - `git clone <repository-url>`
+  - `cd <repository-folder>`
+- Compile all files:
+  - `javac -d out $(find src -name "*.java")`
+- Run the main class (replace `Main` with the actual main class name, with package if any):
+  - `java -cp out Main`
+- Use the main menu to choose a component and follow the prompts
 
----
+## Repository
 
-## How to Compile & Run
-
-### 1. Compile all source files
-```bash
-javac -d out src/Main.java src/array/*.java src/search/*.java src/stack/*.java src/stack/stackqueue/*.java src/linkedlist/*.java src/graph/*.java
-```
-
-### 2. Run the integrated application
-```bash
-java -cp out Main
-```
-
----
-
-## Main Menu Options
-
-```
-========================================
- Data Structure & Graph Performance Analyzer
-========================================
-1. Array Operations
-2. Stack Operations
-3. Queue Operations
-4. Linked List Operations
-5. Searching Operations
-6. Graph Operations
-7. Performance Comparison
-9. Exit
-```
+- GitHub: https://github.com/umarmohamed-02/-Data-structures-and-Algorithms-Graded-Practical-Assignment-2
