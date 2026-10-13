@@ -68,15 +68,47 @@ CIT300 Data Structures and Algorithms – Graded Practical Assignment 2 (Week 12
 
 ## How to Run
 
-- Install JDK 8 or later
+- Prerequisites: JDK 8 or later installed
 - Clone the repository:
-  - `git clone <repository-url>`
-  - `cd <repository-folder>`
-- Compile all files:
-  - `javac -d out $(find src -name "*.java")`
-- Run the main class (replace `Main` with the actual main class name, with package if any):
-  - `java -cp out Main`
-- Use the main menu to choose a component and follow the prompts
+  ```bash
+  git clone https://github.com/umarmohamed-02/-Data-structures-and-Algorithms-Graded-Practical-Assignment-2.git
+  cd -Data-structures-and-Algorithms-Graded-Practical-Assignment-2
+  ```
+- Compile all source files:
+  ```bash
+  javac -d out src/Main.java src/array/*.java src/search/*.java src/stack/*.java src/stack/stackqueue/*.java src/linkedlist/*.java src/graph/*.java
+  ```
+- Run the integrated console application:
+  ```bash
+  java -cp out Main
+  ```
+- (Optional) Run standalone unit test drivers:
+  ```bash
+  # Stack and Queue Test Driver:
+  java -cp out stack.stackqueue.TestStackQueue
+
+  # Linked List Test Driver:
+  java -cp out linkedlist.LinkedListTest
+
+  # Performance Analyzer Benchmark:
+  java -cp out linkedlist.PerformanceAnalyzerTest
+  ```
+
+## Main Menu Options
+
+```text
+========================================
+ Data Structure & Graph Performance Analyzer
+========================================
+1. Array Operations
+2. Stack Operations
+3. Queue Operations
+4. Linked List Operations
+5. Searching Operations
+6. Graph Operations
+7. Performance Comparison
+9. Exit
+```
 
 ## Repository
 
